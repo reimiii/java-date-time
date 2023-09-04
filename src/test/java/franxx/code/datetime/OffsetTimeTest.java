@@ -27,4 +27,28 @@ public class OffsetTimeTest {
         System.out.println(offsetDateTime3);
         System.out.println(offsetDateTime4);
     }
+
+    @Test
+    void toLocalTime() {
+        LocalTime localTime = LocalTime.now();
+        System.out.println(localTime);
+
+        OffsetTime offsetTime = localTime.atOffset(ZoneOffset.ofHours(7));
+        System.out.println(offsetTime);
+
+        LocalTime localTime1 = offsetTime.toLocalTime();
+        System.out.println(localTime1);
+    }
+
+    @Test
+    void toLocaleDateTime() {
+        LocalDateTime localDateTime = LocalDateTime.now();
+        System.out.println(localDateTime);
+
+        OffsetDateTime offsetDateTime = localDateTime.atOffset(ZoneOffset.ofHours(7));
+        System.out.println(offsetDateTime);
+
+        LocalDateTime localDateTime1 = offsetDateTime.toLocalDateTime();
+        System.out.println(localDateTime1);
+    }
 }
