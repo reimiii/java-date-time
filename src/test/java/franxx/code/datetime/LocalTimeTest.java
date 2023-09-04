@@ -31,7 +31,9 @@ public class LocalTimeTest {
     void modify() {
         LocalTime localTime1 = LocalTime.now();
         LocalTime localTime2 = localTime1.plusHours(6);
-        LocalTime localTime3 = localTime1.plusHours(5).minusMinutes(30).minusSeconds(5);
+        LocalTime localTime3 = localTime1.plusHours(5)
+                .minusMinutes(30)
+                .minusSeconds(5);
 
         System.out.println(localTime1);
         System.out.println(localTime2);
